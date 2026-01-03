@@ -27,7 +27,7 @@ Ideal for **creative writing, long roleplay sessions, or extended chat threads**
 
 ## Comparative Note
 
-**Old Method (Conservative Anti-Freeze):**
+**Old Method ([Conservative Anti-Freeze](https://github.com/aston89/ChatGPT-Conservative-Anti-Freeze-for-Long-Chats)):**
 
 - Detached messages were automatically restored when scrolling or reaching certain positions.
 - Introduced additional DOM complexity and CPU/memory overhead.
