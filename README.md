@@ -58,4 +58,4 @@ This approach prioritizes **performance and responsiveness** over automatic rest
 Inside the script, you can adjust:
 
 ```javascript
-const VISIBLE_KEEP = 2; // Number of latest messages to keep visible in DOM
+const VISIBLE_KEEP = 4; // Number of latest messages to keep visible in DOM
