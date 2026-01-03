@@ -27,7 +27,7 @@ Ideal for **creative writing, long roleplay sessions, or extended chat threads**
 
 ## Comparative Note
 
-**Old Method (Batch Restore / Auto-Reveal):**
+**Old Method (Conservative Anti-Freeze):**
 
 - Detached messages were automatically restored when scrolling or reaching certain positions.
 - Introduced additional DOM complexity and CPU/memory overhead.
