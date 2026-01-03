@@ -49,7 +49,7 @@ This approach prioritizes **performance and responsiveness** over automatic rest
 2. Create a new script in your userscript manager.  
 3. Copy and paste [the script from this repository](https://github.com/aston89/ChatGPT-Ultra-Lightweight-Anti-Freeze-for-Long-Chats/blob/main/chatgpt-collapse.js).  
 4. Save and enable the script.  
-5. Open ChatGPT Web and start chatting — old messages will automatically collapse once the limit is exceeded.
+5. Open ChatGPT Web and start chatting, old messages will automatically collapse once the limit is exceeded.
 
 ---
 
