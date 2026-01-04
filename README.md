@@ -50,6 +50,7 @@ This approach prioritizes **performance and responsiveness** over automatic rest
 3. Copy and paste [the script from this repository](https://github.com/aston89/ChatGPT-Ultra-Lightweight-Anti-Freeze-for-Long-Chats/blob/main/chatgpt-collapse.js).  
 4. Save and enable the script.  
 5. Open ChatGPT Web and start chatting, old messages will automatically collapse once the limit is exceeded.
+6. If you are using Firefox, [check this parameter tweak !](https://github.com/aston89/ChatGPT-Conservative-Anti-Freeze-for-Long-Chats/blob/main/firefox-tweak.md)
 
 ---
 
