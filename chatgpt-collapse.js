@@ -115,7 +115,7 @@
     if (document.getElementById('detach-toggle-btn')) return;
     const btn = document.createElement('button');
     btn.id = 'detach-toggle-btn';
-    btn.textContent = enabled ? 'Detach: ON' : 'Detach: OFF';
+    btn.textContent = enabled ? 'Collapse: ON' : 'Collapse: OFF';
     Object.assign(btn.style, {
       position: 'fixed', right: '10px', bottom: '10px', zIndex: 2147483647,
       padding: '6px 10px', borderRadius: '8px', background: '#111', color: '#fff', border: 'none', cursor: 'pointer'
