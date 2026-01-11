@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         ChatGPT Ultra Lightweight Anti-Freeze
+// @name         ChatGPT Ultra Lightweight Anti-Freeze 1.2
 // @namespace    chatgpt-collapse
-// @version      1.1
-// @description  Freeze old ChatGPT messages into lightweight placeholders; restore only on click.
+// @version      1.2
+// @description  Freeze old ChatGPT messages into lightweight placeholders; dereference for max CPU/memory efficiency.
 // @match        https://chat.openai.com/*
 // @match        https://chatgpt.com/*
 // @run-at       document-end
@@ -13,7 +13,7 @@
   'use strict';
 
   // ---------- CONFIG ----------
-  const VISIBLE_KEEP = 4;          // Number of latest messages to keep in DOM
+  const VISIBLE_KEEP = 4; // number of latest messages to keep in DOM
 
   // ---------- STATE ----------
   let hiddenStore = []; // {content, metadata, placeholderElement}
@@ -38,7 +38,7 @@
     catch (e) { return []; }
   }
 
-  // ---------- DETACH ----------
+  // ---------- DETACH & DEREFERENCE ----------
   function detachOldTurnsIfNeeded() {
     if (!enabled) return;
     const turns = getTurns();
@@ -58,7 +58,7 @@
       ph.dataset.collapsedIndex = hiddenStore.length;
       ph.addEventListener('click', () => restoreTurn(ph.dataset.collapsedIndex));
 
-      // store minimal info
+      // store minimal info and metadata
       hiddenStore.push({
         content: el.innerHTML,
         metadata: {
@@ -69,6 +69,11 @@
         placeholderElement: ph
       });
 
+      // ---------- DEREFERENCE ----------
+      // remove all listeners by cloning node (cheap way)
+      const cleanEl = el.cloneNode(true);
+      cleanEl.innerHTML = ''; // clear content to release references
+      // replace in DOM
       el.parentNode.replaceChild(ph, el);
     }
   }
@@ -84,7 +89,8 @@
     if (ph && ph.parentNode) {
       ph.parentNode.replaceChild(node, ph);
     }
-    hiddenStore[index] = null; // free memory
+    // dereference
+    hiddenStore[index] = null;
   }
 
   // ---------- OBSERVER ----------
