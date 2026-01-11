@@ -2,7 +2,7 @@
 // @name         ChatGPT Ultra Lightweight Anti-Freeze for Long Chats
 // @namespace    chatgpt-collapse
 // @version      1.2
-// @description  Freeze old ChatGPT messages into lightweight placeholders; dereference for max CPU/memory efficiency.
+// @description  Collapse old ChatGPT messages into lightweight placeholders; dereference for max CPU/memory efficiency.
 // @match        https://chat.openai.com/*
 // @match        https://chatgpt.com/*
 // @run-at       document-end
