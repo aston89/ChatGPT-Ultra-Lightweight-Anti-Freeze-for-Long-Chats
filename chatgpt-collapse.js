@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         ChatGPT Ultra Lightweight Anti-Freeze 1.2
+// @name         ChatGPT Ultra Lightweight Anti-Freeze
 // @namespace    chatgpt-collapse
 // @version      1.2
 // @description  Freeze old ChatGPT messages into lightweight placeholders; dereference for max CPU/memory efficiency.
