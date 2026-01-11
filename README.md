@@ -22,6 +22,8 @@ Ideal for **creative writing, long roleplay sessions, or extended chat threads**
 - **Customizable retention:** Control how many messages remain visible in the DOM.
 - **Extreme scalability:** Handles 200+ messages without slowing down the browser.
 - **Safe and minimal:** Avoids interfering with ChatGPT Web updates or internal scripts.
+- **Dereferencing & safe cloning:** Old turns are cloned as lightweight placeholders, removing event listeners and internal references to reduce CPU load (prevents React, observer, and event triggers from affecting frozen messages).
+
 
 ---
 
