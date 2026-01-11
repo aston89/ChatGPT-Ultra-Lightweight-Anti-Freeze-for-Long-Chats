@@ -24,7 +24,6 @@ Ideal for **creative writing, long roleplay sessions, or extended chat threads**
 - **Safe and minimal:** Avoids interfering with ChatGPT Web updates or internal scripts.
 - **Dereferencing & safe cloning:** Old turns are cloned as lightweight placeholders, removing event listeners and internal references to reduce CPU load (prevents React, observer, and event triggers from affecting frozen messages).
 
-
 ---
 
 ## Comparative Note
@@ -42,6 +41,19 @@ Ideal for **creative writing, long roleplay sessions, or extended chat threads**
 - Simpler, faster, and ideal for **extremely long conversations (200+ messages)**.
 
 This approach prioritizes **performance and responsiveness** over automatic restoration.
+
+---
+
+## Why CPU Hogging Cannot Be Fully Eliminated
+
+Even with aggressive collapsing, there are fundamental reasons some CPU usage persists:
+- React reconciliation
+- Layout and style recalculation
+- Streaming and diffing of the virtual DOM
+- Hydration and node synchronization
+All of these operations **must** occur on the main thread.  
+This is not a limitation imposed by OpenAI, but a strict browser rule: the main thread is the only place that can safely manipulate the DOM, run layout, and synchronize React components.  
+Going beyond the current ultra-lightweight approach would require refactoring the site itself, because external scripts cannot workerize or offload these core operations without breaking functionality.
 
 ---
 
